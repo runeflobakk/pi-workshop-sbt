@@ -9,10 +9,6 @@ version := "1.0-SNAPSHOT"
 
 scalaVersion in ThisBuild := "2.10.0"
 
-javacOptions in ThisBuild ++= Seq("-source", "1.7", "-target", "1.7")
-
-javaHome := Some(file("/Library/Java/JavaVirtualMachines/jdk1.7.0_17.jdk/Contents/Home"))
-
 
 
 
@@ -36,8 +32,6 @@ libraryDependencies ++= Seq(
 		    "com.pi4j" % "pi4j-service" % "0.0.5",
 		    "com.pi4j" % "pi4j-gpio-extension" % "0.0.5",
 		    "com.pi4j" % "pi4j-device" % "0.0.5"
-		    //"com.pi4j" % "pi4j-native" % "0.0.5" artifacts(Artifact("pi4j-native", "so", "so")) classifier "hard-float",
-		    //"com.pi4j" % "pi4j-native" % "0.0.5" from "http://repo.scala-sbt.org/scalasbt/repo/com/pi4j/pi4j-native/0.0.5/pi4j-native-0.0.5-hard-float.so"
 )
 
 
