@@ -8,11 +8,6 @@ import com.pi4j.io.gpio.GpioPinDigitalOutput
 
 object Gpio {
   
-  implicit class Led(gpioController: GpioPinDigitalOutput) {
-    def on = gpioController.setState(ON);
-    def off = gpioController.setState(OFF);
-  }
-  
   private val gpio = GpioFactory.getInstance();
   
   lazy val leds = List(
