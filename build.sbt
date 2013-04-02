@@ -19,11 +19,11 @@ javaHome := Some(file("/Library/Java/JavaVirtualMachines/jdk1.7.0_17.jdk/Content
 
 assemblySettings
 
-mainClass in assembly := Some("no.bekk.piworkshop.MyPi")
+mainClass in assembly := Some("no.bekk.piworkshop.ScalaPi")
 
 jarName in assembly := "pi-workshop.jar"
 
-assembleArtifact in packageScala := false
+assembleArtifact in packageScala := true
 
 
 
@@ -34,9 +34,10 @@ assembleArtifact in packageScala := false
 libraryDependencies ++= Seq(
 		    "com.pi4j" % "pi4j-core" % "0.0.5",
 		    "com.pi4j" % "pi4j-service" % "0.0.5",
-		    "com.pi4j" % "pi4j-device" % "0.0.5",
 		    "com.pi4j" % "pi4j-gpio-extension" % "0.0.5",
 		    "com.pi4j" % "pi4j-device" % "0.0.5"
+		    //"com.pi4j" % "pi4j-native" % "0.0.5" artifacts(Artifact("pi4j-native", "so", "so")) classifier "hard-float",
+		    //"com.pi4j" % "pi4j-native" % "0.0.5" from "http://repo.scala-sbt.org/scalasbt/repo/com/pi4j/pi4j-native/0.0.5/pi4j-native-0.0.5-hard-float.so"
 )
 
 
