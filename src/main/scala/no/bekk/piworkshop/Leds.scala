@@ -2,7 +2,7 @@ package no.bekk.piworkshop
 
 import com.pi4j.io.gpio.GpioFactory
 import com.pi4j.io.gpio.PinState.{LOW => OFF}
-import com.pi4j.io.gpio.PinState.{LOW => ON}
+import com.pi4j.io.gpio.PinState.{HIGH => ON}
 import com.pi4j.io.gpio.RaspiPin
 import com.pi4j.io.gpio.GpioPinDigitalOutput
 
